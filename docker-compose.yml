@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+    basketdb:
+        image: redis
+
+services:
+  weatheraplication:
+    image: ${DOCKER_REGISTRY-}weatheraplication
+    build:
+      context: .
+      dockerfile: Dockerfile
